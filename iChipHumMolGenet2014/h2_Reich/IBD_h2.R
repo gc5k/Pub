@@ -40,8 +40,6 @@ tMZF=(mat[1,2] - mat[2,2])/mat[1,4]
 tDZF=(mat[1,2] - mat[3,2])/mat[1,4]
 h2F=2*(tMZF - tDZF)
 
-print(paste0("Prevelance for the population: ", mat[1,1]))
-print(paste0("Prevelance for MZ twins: ", mat[2,1]))
-print(paste0("Prevelance for DZ twins: ", mat[3,1]))
+print(mat)
 print(paste0("The estimated heritability is: ", h2, "(", sdh2, ") by Reich's method"))
 print(paste0("The estimated heritability is: ", h2F, "(", sdh2, ") by Falconer's method"))
