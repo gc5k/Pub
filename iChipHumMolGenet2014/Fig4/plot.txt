@@ -1,0 +1,26 @@
+Chip	Disease	Partitioning	Component	Va
+GWAS	CD	Tier1	1	0.591
+GWAS	CD	Tier1   2	0.409
+GWAS	CD	Tier2   1	0.519
+GWAS	CD	Tier2	2	0.481
+GWAS	CD	Tier3	1	0.465
+GWAS	CD	Tier3	2	0.535
+GWAS	UC	Tier1	1	0.5
+GWAS	UC	Tier1	2	0.5
+GWAS	UC	Tier2	1	0.454
+GWAS	UC	Tier2	2	0.546
+GWAS	UC	Tier3	1	0.409
+GWAS	UC	Tier3	2	0.591
+iChip	CD	Tier1	1	0.667
+iChip	CD	Tier1	2	0.333
+iChip	CD	Tier2	1	0.549
+iChip	CD	Tier2	2	0.451
+iChip	CD	Tier3	1	0.437
+iChip	CD	Tier3	2	0.563
+iChip	UC	Tier1	1	0.662
+iChip	UC	Tier1	2	0.338
+iChip	UC	Tier2	1	0.679
+iChip	UC	Tier2	2	0.321
+iChip	UC	Tier3	1	0.568
+iChip	UC	Tier3	2	0.432
+

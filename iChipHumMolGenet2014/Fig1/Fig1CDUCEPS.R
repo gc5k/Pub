@@ -1,0 +1,130 @@
+postscript("Fig1.eps", width=6.3, height=4, horizontal=F, paper="a4", pointsize=7)
+
+#par(mfrow=c(1,2))
+mat=matrix(1:2, 1,2)
+layout(mat)
+par(font=1)
+
+CD=matrix(0, 3, 3)
+CD[,1]=c(20719, 6333, 3230)
+CD[,2]=c(30904, 15036, 4829)
+CD[,3]=c(140, 71, 32)
+
+UC=matrix(0, 4, 3)
+UC[,1]=c(17888, 6687, 2693, 1167)
+UC[,2]=c(36441, 19718, 6791, 777)
+UC[,3]=c(133, 47, 30, 2)
+
+AS=matrix(0, 2, 3)
+AS[,1]=c(10619, 1787)
+AS[,2]=c(15145, 4800)
+AS[,3]=c(26, 13)
+
+Ce=matrix(0, 2, 3)
+Ce[,1]=c(12041, 2410)
+Ce[,2]=c(12228, 4828)
+Ce[,3]=c(40, 13)
+
+PBS=matrix(0, 2, 3)
+PBS[,1]=c(2861, 1840)
+PBS[,2]=c(8514, 5163)
+PBS[,3]=c(26, 17)
+
+PSC=matrix(0, 2, 3)
+PSC[,1]=c(3789, 715)
+PSC[,2]=c(25079, 2962)
+PSC[,3]=c(12, 2)
+
+IM=matrix(0, 4, 3)
+IM[,1]=c(10588, 2622, 1359, 474)
+IM[,2]=c(22806, 5667, 1400, 1146)
+IM[,3]=c(36,17, 7, 1)
+
+JDA=matrix(0, 2, 3)
+JDA[,1]=c(2816,809)
+JDA[,2]=c(13056,3535)
+JDA[,3]=c(17,7)
+
+RA=matrix(0, 2, 3)
+RA[,1]=c(11475,5539)
+RA[,2]=c(15870,20169)
+RA[,3]=c(20,7)
+
+ATD=matrix(0, 2, 3)
+ATD[,1]=c(2747, 1536)
+ATD[,2]=c(9364, 1516)
+ATD[,3]=c(7, 2)
+
+#par(cex=1.3)
+
+plot(cex.main=0.8, main="Significant hits and total sample size", log10(CD[,1]+CD[,2]), log10(CD[,3]), pch=19, col="red", xlim=c(2, log10(60000)), ylim=c(0, log10(1500)), xlab="", ylab="", axes=F)
+axis(side=1, at=c(2, 3, 4, log10(60000)), labels=c("100", "1000", "10000", "60000"), lwd=0.2)
+mtext("#sample size", side=1, line=3)
+axis(side=2, at=c(0, 1, 2, log10(200), 3), labels=c("1", "10", "100", "200", "1000"), lwd=0.2)
+mtext("#Genome-wide significant hits", side=2, line=2.5)
+#lines(CD[,1]+CD[,2], CD[,3], pch=19, col="red")
+points(log10(UC[,1]+UC[,2]), log10(UC[,3]), pch=19, col="blue")
+#lines(UC[,1]+UC[,2],UC[,3], pch=19, col="blue")
+points(log10(AS[,1]+AS[,2]), log10(AS[,3]), pch=19, col="gold")
+#lines(AS[,1]+AS[,2], AS[,3], pch=19, col="gold")
+points(log10(Ce[,1]+Ce[,2]), log10(Ce[,3]), pch=19, col="green")
+#lines(Ce[,1]+Ce[,2], Ce[,3], pch=19, col="green")
+
+points(log10(PBS[,1]+PBS[,2]), log10(PBS[,3]), pch=19, col="gray")
+
+points(log10(PSC[,1]+PSC[,2]), log10(PSC[,3]), pch=19, col="black")
+#lines(PSC[,1]+PSC[,2], PSC[,3], pch=19, col="black")
+points(log10(JDA[,1]+JDA[,2]), log10(JDA[,3]), pch=19, col="brown")
+#lines(JDA[,1]+JDA[,2], JDA[,3], pch=19, col="brown")
+points(log10(RA[,1]+RA[,2]), log10(RA[,3]), pch=19, col="yellow")
+#lines(RA[,1]+RA[,2], RA[,3], pch=19, col="yellow")
+points(log10(ATD[,1]+ATD[,2]), log10(ATD[,3]), pch=19, col="pink")
+#lines(ATD[,1]+ATD[,2], ATD[,3], pch=19, col="violet", col="pink")
+points(log10(IM[,1]+IM[,2]), log10(IM[,3]), pch=19, col="violet")
+
+legend(bty="n", x=2, y=3, legend=c("Crohn's disease", "Ulcerative colitis", "Ankylosing spondylitis", "Celiac disease", "Primary billiary cirrhosis", "Primary sclerosing cholangitis", "Juvenile idiopathic arthritis", "Rheumatoid arthritis", "Autoimmune thyroid disease","Psoriasis"),
+       col=c("red", "blue", "gold", "green", "gray", "black", "brown", "yellow", "pink", "violet"), pch=19)
+
+
+plot(cex.main=0.8, main="Significant hits and number of cases", log10(CD[,1]), log10(CD[,3]), pch=19, col="red", xlim=c(2, log10(25000)), ylim=c(0, log10(1500)), xlab="", ylab="", axes=FALSE)
+axis(side=1, at=c(2, 3, 4, log10(25000)), labels=c("100", "1000", "10000", "25000"), lwd=0.2)
+mtext("#case", side=1, line=3)
+axis(side=2, at=c(0, 1, 2, log10(200), 3), labels=c("1", "10", "100", "200", "1000"), lwd=0.2)
+mtext("#Genome-wide significant hits", side=2, line=2.5)
+#lines(CD[,1], CD[,3], pch=19, col="red")
+points(log10(UC[,1]), log10(UC[,3]), pch=19, col="blue")
+#lines(UC[,1],UC[,3], pch=19, col="blue")
+points(log10(AS[,1]), log10(AS[,3]), pch=19, col="gold")
+#lines(AS[,1], AS[,3], pch=19, col="gold")
+points(log10(Ce[,1]), log10(Ce[,3]), pch=19, col="green")
+#lines(Ce[,1], Ce[,3], pch=19, col="green")
+
+points(log10(PBS[,1]), log10(PBS[,3]), pch=19, col="gray")
+
+points(log10(PSC[,1]), log10(PSC[,3]), pch=19, col="black")
+#lines(PSC[,1], PSC[,3], pch=19, col="black")
+
+points(log10(JDA[,1]), log10(JDA[,3]), pch=19, col="brown")
+#lines(JDA[,1], JDA[,3], pch=19, col="brown")
+points(log10(RA[,1]), log10(RA[,3]), pch=19, col="yellow")
+#lines(RA[,1], RA[,3], pch=19, col="yellow")
+points(log10(ATD[,1]), log10(ATD[,3]), pch=19, col="pink")
+#lines(ATD[,1], ATD[,3], pch=19, col="violet")
+points(log10(IM[,1]), log10(IM[,3]), pch=19, col="violet")
+#lines(IM[,1], IM[,3], pch=19, col="pink")
+
+cs=c(AS[,1],ATD[,1], CD[,1], Ce[,1], IM[,1], JDA[,1], PBS[,1], PSC[,1], RA[,1], UC[,1])
+qtl=c(AS[,3],ATD[,3], CD[,3], Ce[,3], IM[,3], JDA[,3], PBS[,3], PSC[,3], RA[,3], UC[,3])
+#plot(log10(cs), log10(qtl), xlim=c(0, log10(25000)), ylim=c(0, log10(250)), xlab="", ylab="", pch=18, axes=FALSE)
+#axis(side=1, at=c(0, 1, 2, 3, 4, log10(25000)), labels=c("1", "10", "100", "1000", "10000", "25000"))
+#mtext("#case", side=1, line=2)
+#axis(side=2, at=c(0, 1, 2, log10(250)), labels=c("1", "10", "100", "250"))
+#mtext("#GWAS hits", side=2, line=2)
+reg=lm(qtl~log10(cs))
+reg1=lm(qtl~cs)
+reg2=lm(log10(qtl)~log10(cs))
+
+#par(cex=0.8)
+#plot(x=NULL, y=NULL, xlim=c(0, 30), ylim=c(1, 10), axes=FALSE, xlab="", ylab="")
+
+dev.off()
