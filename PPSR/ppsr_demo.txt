@@ -1,7 +1,7 @@
 gear mwpower --reg 0.95 --alpha 0.01 --beta 0.05 --test 12100 --out mw
 gear mwscore --bfile set1 --encode mw.encode --refallele refFreq.txt --out set1
 gear mwscore --bfile set2 --encode mw.encode --refallele refFreq.txt --out set2
-gear mw --set1 set1.profile --set2 set2.profile --encode mw.encode --out overlap --verbose
+gear mw --set1 set1.profile --set2 set2.profile --encode mw.encode --out overlap 
 
 # or if you are only interested in overlapping samples, the last command can be modified to
-gear mw --set1 set1.profile --set2 set2.profile --encode mw.encode --out overlap
+gear mw --set1 set1.profile --set2 set2.profile --encode mw.encode --out overlap --verbose
