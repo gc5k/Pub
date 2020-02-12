@@ -3,5 +3,5 @@ gear mwscore --bfile set1 --encode mw.encode --refallele refFreq.txt --out set1
 gear mwscore --bfile set2 --encode mw.encode --refallele refFreq.txt --out set2
 gear mw --set1 set1.profile --set2 set2.profile --encode mw.encode --out overlap 
 
-# or if you are only interested in overlapping samples, the last command can be modified to
+# or if you are only interested in seeing all possible overlapping comparisons, the last command can be modified to
 gear mw --set1 set1.profile --set2 set2.profile --encode mw.encode --out overlap --verbose
